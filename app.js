@@ -1,0 +1,1 @@
+const form=document.querySelector("#lead-form");const status=document.querySelector("#status");form?.addEventListener("submit",event=>{event.preventDefault();status.hidden=false;form.reset();});
