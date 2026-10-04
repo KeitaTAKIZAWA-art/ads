@@ -5,6 +5,24 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="OpenAI Ads conversion starter landing page">
 <title>GROWTH — Conversion Starter</title>
+<script>
+(function (w, d, s, u) {
+  if (w.oaiq) return;
+  var q = function () { q.q.push(arguments); };
+  q.q = [];
+  w.oaiq = q;
+  var js = d.createElement(s);
+  js.async = true;
+  js.src = u;
+  var f = d.getElementsByTagName(s)[0];
+  f.parentNode.insertBefore(js, f);
+})(window, document, "script", "https://bzrcdn.openai.com/sdk/oaiq.min.js");
+
+oaiq("init", {
+  pixelId: "NQsYsyPDNZjeugkETsPWDE",
+  debug: true
+});
+</script>
 <link rel="stylesheet" href="styles.css">
 <script src="app.js" defer></script>
 </head>
@@ -12,11 +30,11 @@
 <header><div class="wrap nav"><strong>GROWTH<span>.</span></strong><a href="#contact">相談する</a></div></header>
 <main>
 <section class="hero"><div class="wrap grid">
-<div><p class="eyebrow">CHATGPT ADS READY</p><h1>広告クリックを、<br><em>成果につなげる。</em></h1><p class="lead">高速でシンプルなランディングページ。OpenAI Ads のコンバージョン計測を追加できる構成で、まずはサイトとして公開できます。</p><div class="actions"><a class="btn primary" href="#contact">無料で相談する</a><a class="btn" href="#features">仕組みを見る</a></div></div>
-<div class="card"><p class="eyebrow">CONVERSION FLOW</p><div class="step"><b>01</b><strong>広告クリック</strong><small>oppref を利用した計測</small></div><div class="line"></div><div class="step"><b>02</b><strong>サイト訪問</strong><small>Measurement Pixel</small></div><div class="line"></div><div class="step"><b>03</b><strong>問い合わせ</strong><small>conversion event</small></div></div>
+<div><p class="eyebrow">CHATGPT ADS READY</p><h1>広告クリックを、<br><em>成果につなげる。</em></h1><p class="lead">高速でシンプルなランディングページ。OpenAI Ads のコンバージョン計測を組み込んだサイトです。</p><div class="actions"><a class="btn primary" href="#contact">無料で相談する</a><a class="btn" href="#features">仕組みを見る</a></div></div>
+<div class="card"><p class="eyebrow">CONVERSION FLOW</p><div class="step"><b>01</b><strong>広告クリック</strong><small>oppref を利用した計測</small></div><div class="line"></div><div class="step"><b>02</b><strong>サイト訪問</strong><small>Measurement Pixel</small></div><div class="line"></div><div class="step"><b>03</b><strong>問い合わせ</strong><small>lead_created</small></div></div>
 </div></section>
-<section id="features" class="section"><div class="wrap"><p class="eyebrow">FEATURES</p><h2>必要なものだけ、最初から。</h2><div class="cards"><article><b>01</b><h3>高速な静的サイト</h3><p>ビルド不要。静的ホスティングへそのまま配置できます。</p></article><article><b>02</b><h3>計測対応</h3><p>OpenAI Ads の Pixel / Conversions API を追加できる設計です。</p></article><article><b>03</b><h3>リード獲得</h3><p>問い合わせ完了をコンバージョンとして扱えるフォームを用意しています。</p></article></div></div></section>
-<section id="contact" class="contact"><div class="wrap contact-grid"><div><p class="eyebrow">CONTACT</p><h2>まずは、相談から。</h2><p>フォーム送信をサイト上の主要なコンバージョンポイントとして使えます。</p></div><form id="lead-form"><label>お名前<input name="name" required></label><label>メールアドレス<input name="email" type="email" required></label><label>ご相談内容<textarea name="message" rows="5" required></textarea></label><button class="btn primary" type="submit">相談を申し込む</button><p id="status" class="status" hidden>ありがとうございます。お問い合わせを受け付けました。</p></form></div></section>
+<section id="features" class="section"><div class="wrap"><p class="eyebrow">FEATURES</p><h2>必要なものだけ、最初から。</h2><div class="cards"><article><b>01</b><h3>高速な静的サイト</h3><p>ビルド不要。静的ホスティングへそのまま配置できます。</p></article><article><b>02</b><h3>OpenAI Pixel</h3><p>Pixel ID を設定済み。広告クリックの計測信号を取得できます。</p></article><article><b>03</b><h3>リード計測</h3><p>問い合わせ完了時に標準イベント <code>lead_created</code> を送信します。</p></article></div></div></section>
+<section id="contact" class="contact"><div class="wrap contact-grid"><div><p class="eyebrow">CONTACT</p><h2>まずは、相談から。</h2><p>フォーム送信をリードコンバージョンとして計測します。</p></div><form id="lead-form"><label>お名前<input name="name" required></label><label>メールアドレス<input name="email" type="email" required></label><label>ご相談内容<textarea name="message" rows="5" required></textarea></label><button class="btn primary" type="submit">相談を申し込む</button><p id="status" class="status" hidden>ありがとうございます。お問い合わせを受け付けました。</p></form></div></section>
 </main>
 <footer><div class="wrap"><strong>GROWTH.</strong><span>OpenAI Ads Conversion Starter</span></div></footer>
 </body>
